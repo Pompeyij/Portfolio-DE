@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh; 
+  color: black;
+}
+.nav-blur {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.box-gradient {
+  font-weight: 600;
+  color: transparent;
+  background: linear-gradient(150deg, #000000, #e01010);
+  background-size: 200%;
+  background-position: left;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 0 0px rgba(255, 150, 200, 0));
+  transition: background-position 0.6s ease, filter 0.6s ease, opacity 0.3s ease;
+}
+.box-gradient:hover {
+  background-position: right;
+  filter: drop-shadow(0 0 18px rgba(255, 140, 180, 0.6));
+  opacity: 1;
+}
+
+.element {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 0.55);
+}
+.element:hover {
+  transform: scale(0.99) rotate(0deg) translate(0px, 0px) skewX(0deg);
+  opacity: 1;
+  filter: brightness(1.0);
+  border-radius: 10px;
+}
+
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 50px;
+  }
+}
+.slide-down {
+  overflow: hidden;
+  animation: slidedown 0.3s ease forwards;
+}
+@keyframes slideup {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 50px;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+}
+.slide-up {
+  overflow: hidden;
+  animation: slideup 0.3s ease forwards;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease forwards;
+}
+
+.fade-out {
+  animation: fade-out 0.5s ease forwards;
+}

@@ -1,0 +1,35 @@
+<header class="sticky top-0 z-50 p-3 shadow-md nav-blur">
+    <nav class="flex bg-transparent p-4 justify-between items-center">
+            <a href="#Home" class="text-2xl">
+               <span class="box-gradient">ikaro</span>.dev
+            </a>
+        <button id="menu-btn" class="md:hidden flex flex-col gap-1">
+            <span class="w-6 h-[3px] bg-black"></span>
+            <span class="w-6 h-[3px] bg-black"></span>
+            <span class="w-6 h-[3px] bg-black"></span>
+        </button>
+        <div id="menu-desk" class="p-4 pr-8 hidden md:block">
+            <ul class="flex gap-6">
+                <li><a class="text-black hover:text-gray-800 transition" href="#Home">Home</a></li>
+                <li><a class="text-black hover:text-gray-800 transition" href="#Sobre">Sobre</a></li>
+                <li><a class="text-black hover:text-gray-800 transition" href="#Projetos">Projetos</a></li>
+                <li><a class="text-black hover:text-gray-800 transition" href="#Contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul id="mobile-menu" class="md:hidden hidden flex justify-center items-center slide-down slide-up">
+        <li><a class="text-black hover:text-gray-800 transition p-3" href="#Home">Home</a></li>
+        <li><a class="text-black hover:text-gray-800 transition p-3" href="#Sobre">Sobre</a></li>
+        <li><a class="text-black hover:text-gray-800 transition p-3" href="#Projetos">Projetos</a></li>
+        <li><a class="text-black hover:text-gray-800 transition p-3" href="#Contato">Contato</a></li>
+    </ul>
+</header>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script>
+    const btn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
